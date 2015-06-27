@@ -1,0 +1,71 @@
+.carousel-caption {
+	color : #000;
+	background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+button.floatLeft{
+    
+}
+.myPage{
+    padding-top: 60px;
+    min-height: 600px;
+}
+.navbar {
+background-color : #1E2044;
+background-color : #212344;
+background-color: #5BC0DE;
+background-color : #58A828;
+}
+nav .navbar-default .navbar-nav > li > a{
+    color: #fff;
+}
+nav .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #58A828;
+    background-color: #fff;
+}
+.ourPromiseIcons img{
+max-height: 100px;
+    height: auto;
+}
+
+.marketing h2 {
+    font-weight: normal;
+    color: #58A828;
+}
+
+.appFeatureRow{
+background-color: #f0f0f0;
+}
+
+.carousel {
+    margin-bottom: 0px;
+}
+.myOrderListImg{
+color: #000;
+background-color: rgba(255, 255, 255, 0.3); 
+}
+
+#myAddressPanel .row .col{
+    text-align: center;
+    box-sizing: border-box;
+}
+.row  .col:hover{
+    border: 1px solid orange;
+    box-shadow: 5px 5px 5px #888888;
+}
+.row  .col:active{
+color: green;
+}
+/*product details*/
+.product-row{
+    padding: 0;
+    margin: 0;
+}
+
+.product-cell {
+    box-sizing: border-box;
+    padding: 12px 0px;
+    border: 1px solid #DCDCDC;
+    margin: 0px;
+    text-align: center;
+}
