@@ -19,7 +19,6 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        alert("Hai Hello");
         var self = this
         $(function() {
             self.bindEvents();
@@ -30,6 +29,25 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
+        //For all the popovers in the application
+        $('[data-toggle="popover"]').popover({
+                html : true,
+                animation:false,
+                trigger: 'manual'}).on("mouseenter", function () {
+        var _this = this;
+        $(this).popover("show");
+        $(this).siblings(".popover").on("mouseleave", function () {
+            $(_this).popover('hide');
+        });
+    }).on("mouseleave", function () {
+        var _this = this;
+        setTimeout(function () {
+            if (!$(".popover:hover").length) {
+                $(_this).popover("hide")
+            }
+        }, 100);
+    });
+        //FOr smooth transition of page switching scrolSpy 
         $("#nav ul li a[href^='#'],.shopNow").on('click', function(e) {
            // prevent default anchor click behavior
            e.preventDefault();

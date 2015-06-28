@@ -47,7 +47,7 @@
               <ul class="nav navbar-nav">
                 <li><a href="#homePage">Home</a></li>
                 <li><a  href="#shoppingCartPage">Shop</a></li>
-                <li><a href="#itemsCheckOut">myCart</a></li>
+                  <li><a  href="#itemsCheckOut">My Cart</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -61,21 +61,60 @@
                   </ul>
                 </li>
               </ul>
-                <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input placeholder="Email" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-              <input placeholder="Password" class="form-control" type="password">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
+                <div class="navbar-form navbar-right">
+               <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign in</button>
+            <a href="#" title="My Cart" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="<h3>Total : 40Rs</h3><p>if items are less than 3 we'll show all 3 items here, if more than 3 we'll show only no of items and cost</p>" href="#itemsCheckOut">My Cart</a>
+          </div>
             </div>
           </div>
         </nav>
       </div>
     </div>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+      <div class="modal-body">
+        <form class="navbar-form">
+            <div class="form-group">
+              <input placeholder="Email/Phone" class="form-control" type="text" required="required">
+            </div>
+            <div class="form-group">
+              <input placeholder="Password" class="form-control" type="password" required="required">
+            </div>
+            <button type="submit" class="btn btn-success" data-toggle="collapse" data-parent="#basketCheckout" href="#myAddressPanel" >Sign in</button>
+          </form>
+        </div>
+    <div class="modal-header">
+      <h4 class="modal-title">Sign Up</h4>
+          </div>
+         <div class="modal-body">
+          <form class="navbar-form">
+            <div class="form-group">
+              <input placeholder="Email/Phone" class="form-control" type="text" required="required">
+            </div>
+              <button type="submit" class="btn btn-warning" data-toggle="collapse" data-parent="#basketCheckout" href="#myAddressPanel" >Send OTP</button>
+        </form>
+          <form class="navbar-form">
+              <div class="form-group">
+              <input placeholder="Enter OTP" class="form-control" type="text" required="required">
+            </div>
+            <button type="submit" class="btn btn-success" data-toggle="collapse" data-parent="#basketCheckout" href="#myAddressPanel" >Sign up</button>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    
 <div id="homePage" class="">
     <!-- Carousel
     ================================================== -->
@@ -198,7 +237,7 @@
           <p><a class="playStore" href="#" role="button"></a><img class="img-responsive" src="img/andriodAppBtn.jpeg" alt="PLAY STORE" width="200px"><a class="" href="#" role="button"><img class="img-responsive" src="img/appStorebtn.png" alt="APP STORE" width="202px"></a></p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" src="https://cdn.jiffstore.com/assets/v3/phones-2-cd2e3a3a6effe3655815cafbdd3f1fc5.png" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="img/myMobApp.png" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -420,7 +459,7 @@
             </div>
             <div id="myBasketPanel" class="panel-collapse collapse in">
                 <div class="panel-body">
-                    <a data-toggle="collapse" data-parent="#basketCheckout" href="#myAddressPanel" >Place order</a>
+                    <button type="submit" class="btn btn-lg btn-warning" data-toggle="collapse" data-parent="#basketCheckout" href="#myLoginPanel" >Place Order</button>
                     <p>Basket Details</p>
                     <p>Basket Details</p>
                     <p>Basket Details</p>
@@ -435,21 +474,28 @@
                     <p>Basket Details</p>
                     <p>Basket Details</p>
                     <p>Basket Details</p>
-                    <a data-toggle="collapse" data-parent="#basketCheckout" href="#myAddressPanel" >Place order</a>
+                    <button type="submit" class="btn btn-lg btn-warning" data-toggle="collapse" data-parent="#basketCheckout" href="#myLoginPanel" >Place Order</button>
                     </p>
                 </div>
             </div>
         </div>
-    <div class="panel-group" id="basketCheckout">
         <div class="panel panel-default">
-            <div class="panel-heading" data-toggle="collapse" data-parent="#basketCheckout" href="#myBasketPanel">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#basketCheckout" href="#myLoginPanel">
                 <h4 class="panel-title">
-                    <a>My Basket</a>
+                    <a>Login</a>
                 </h4>
             </div>
-            <div id="myBasketPanel" class="panel-collapse collapse in">
+            <div id="myLoginPanel" class="panel-collapse collapse in">
                 <div class="panel-body">
-                    
+                    <form class="navbar-form">
+            <div class="form-group">
+              <input placeholder="Email" class="form-control" type="text" required="required">
+            </div>
+            <div class="form-group">
+              <input placeholder="Password" class="form-control" type="password" required="required">
+            </div>
+            <button type="submit" class="btn btn-success" data-toggle="collapse" data-parent="#basketCheckout" href="#myAddressPanel" >Sign in</button>
+          </form>
                 </div>
             </div>
         </div>
